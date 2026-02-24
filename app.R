@@ -5,9 +5,13 @@ options(beaverApp.data.pkg = "beaverAppDataScotlandRivTay")   #  data package fo
 Sys.setenv(BEAVERAPP_DATA_PKG = "beaverAppDataScotlandRivTay", 
            APP_MODE="normal",    
            BEAVERAPP_VERBOSE =FALSE,
-           APP_REGION="Scotland")
-           # BEAVERAPP_PASSWORD= "XXX" 
- 
+           APP_REGION="Scotland",
+           APP_REGIONSUBSET= "rivTay",
+           BEAVERAPP_TTLESUFF= "River Tay (case study)",
+           BEAVERAPP_NREPS3= 30L,
+           BEAVERAPP_NREPS4= 50L,
+           BEAVERAPP_NREPS5= 100L)
+
 app_password <<- Sys.getenv("BEAVERAPP_PASSWORD") 
  
 options(shiny.maxRequestSize = 7200 * 1024^2)  # just in case, 7200MB uploads
